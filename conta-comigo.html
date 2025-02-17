@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,700" rel="stylesheet">
+
+    <title>Conta Comigo - Heineken</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #00A650, #006837);
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .heineken-navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 50px;
+            background: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .heineken-logo img {
+            height: 60px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-links a {
+            color: #006837;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.5s ease;
+        }
+
+        .navbar-links a:hover {
+            color: #00A650;
+            transform: scale(1.02);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 100px 25px 30px;
+            background: white;
+            color: #333;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            margin-top: 150px;
+        }
+
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-background {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 50%;
+        }
+
+        .hero-title {
+            color: #007a33;
+            font-size: 48px;
+            font-weight: bold;
+            margin-top: 80px;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-section {
+            border-radius: 10px;
+            margin: 0 20px;
+            padding: 80px 90px;
+            background: #f8f8f8;
+            color: #333;
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .cta-section:nth-child(even) {
+            background: #fff;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            color: #007a33;
+            margin-bottom: 20px;
+        }
+
+        .cta-button-grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        section#inscricao {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00A650, #007a33);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+        }
+
+        .cta-button img {
+            max-width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.08);
+            background: linear-gradient(135deg, #008f4c, #005f2c);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="heineken-navbar">
+        <div class="heineken-logo">
+            <img src="./assets/Heineken_Logo.svg.png" alt="Heineken">
+        </div>
+        <nav class="navbar-links">
+            <a href="#programa">Conheça o Programa</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#inscricao">Inscreva-se</a>
+        </nav>
+    </header>
+
+    <div class="hero-container">
+        <div class="hero-image-container">
+            <img src="./assets/image 10.png" alt="Conta Comigo" class="hero-background">
+            <img src="./assets/image 9.png" alt="Sobreposição" class="hero-overlay">
+        </div>
+        <h1 class="hero-title">CONTA COMIGO</h1>
+    </div>
+    <section class="cta-section" id="programa">
+        <h2>O que é o Conta Comigo?</h2>
+        <p>Na HEINEKEN, cuidar de você e da sua família é nossa prioridade! Por isso, reunimos em um só lugar mais de 30
+            benefícios, todos pensados para o seu bem-estar integral.</p>
+    </section>
+
+    <section class="cta-section" id="beneficios">
+        <h2>Benefícios HEINEKEN</h2>
+        <p>Mas há muito mais! Em nossa Cartilha de Benefícios, você encontra todos os detalhes sobre os benefícios que
+            estão à sua disposição. Explore, aproveite e lembre-se: para cada momento na HEINEKEN, há um benefício
+            pensado para você.</p>
+        <br>
+        <div class="cta-button-grid">
+            <a href="#" class="cta-button">
+                <img src="./assets/image 1.png" alt="Benefícios">
+                Benefícios HEINEKEN
+            </a>
+        </div>
+    </section>
+
+    <section class="cta-section" id="inscricao">
+        <h2>Programas HEINEKEN</h2>
+        <p>
+        <p>O Conta Comigo é um dos nossos principais benefícios: um espaço seguro, disponível 24 horas, que oferece
+            suporte psicológico, jurídico, financeiro e nutricional, além de apoio em momentos delicados. Ele também é a
+            sua porta de entrada para acessar todos os nossos programas de saúde.</p>
+        </p>
+        <div class="cta-button-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <a href="#" class="cta-button">
+                <img src="./assets/image 25.png" alt="Nasce uma Estrela">
+                Nasce uma Estrela
+            </a>
+            <a href="#" class="cta-button">
+                <img src="./assets/image 18.png" alt="Heineken Cuida">
+                Heineken Cuida
+            </a>
+            <a href="#" class="cta-button">
+                <img src="./assets/image 15.png" alt="Viva Bem HEINEKEN">
+                Viva Bem HEINEKEN
+            </a>
+            <a href="#" class="cta-button">
+                <img src="./assets/image 13.png" alt="Conta Comigo">
+                Conta Comigo
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>
