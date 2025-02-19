@@ -94,7 +94,7 @@
 
         /* Hero section */
         .hero-container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 120px auto 30px;
             background: white;
             color: #333;
@@ -132,7 +132,7 @@
             font-weight: bold;
             margin-top: 30px;
             text-transform: uppercase;
-            animation: fadeIn 1s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
         }
 
         /* Animações */
@@ -157,6 +157,7 @@
             text-align: center;
             margin-bottom: 50px;
             animation: fadeInUp 1s ease-in-out;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .cta-section:nth-child(even) {
@@ -213,6 +214,137 @@
             font-size: 18px;
             margin-bottom: 5px;
         }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .footer-left {
+            width: 50%;
+            background: #288154;
+            padding: 20px;
+        }
+
+        .footer-right {
+            width: 50%;
+            background: #a7e833;
+            padding: 20px;
+        }
+
+        .footer-p {
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            margin: 0 auto 50px;
+            padding: 60px 90px;
+            background: #f8f8f8;
+            color: #333;
+            max-width: 1200px;
+            /* text-align: left; */
+        }
+
+        .cta-left {
+            /* width: 50%; */
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .cta-right {
+            width: 100%;
+            padding: 50px;
+            background: #a7e833;
+            border-radius: 0 10px 10px 0;
+            position: relative;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            color: #007a33;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            /* background: #007a33; */
+            color: #007a33;
+            /* padding: 15px; */
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: x-large;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00A650, #007a33);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 250px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.08);
+            background: linear-gradient(135deg, #008f4c, #005f2c);
+        }
+
+        .cta-right img {
+            position: absolute;
+            bottom: 1px;
+            right: 85px;
+            max-width: 40%;
+        }
+
+        #saiba-mais {
+            padding: 15px;
+        }
+
+        #programa p,
+        #programa h2 {
+            text-align: left;
+        }
+
+        .cta-right h3 {
+            text-align: left;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -243,10 +375,23 @@
 
     <!-- O que é o programa -->
     <section class="cta-section" id="programa">
-        <h2>O que é o Conta Comigo?</h2>
-        <p>Na HEINEKEN, cuidar de você e da sua família é nossa prioridade! <br> Por isso, reunimos em um só lugar mais
-            de 30
-            benefícios, todos pensados para o seu bem-estar integral.</p>
+        <div class="cta-left">
+            <h2>O que é o Conta Comigo?</h2>
+            <p>Na HEINEKEN, cuidar de você e da sua família é nossa prioridade! Por isso, reunimos em um só lugar mais
+                de 30 benefícios, todos pensados para o seu bem-estar integral.</p>
+            <br>
+            <p>O Conta Comigo é um espaço seguro, disponível 24 horas, que oferece suporte psicológico, jurídico,
+                financeiro e nutricional, além de apoio em momentos delicados.</p>
+        </div>
+        <div class="cta-right">
+            <h3 class="info-box">Informações Importantes</h3>
+            <p>Este benefício é acessível a todos os colaboradores e seus
+                <br>dependentes legais.
+            </p>
+            <p>Disponível em qualquer momento, sem custos adicionais.</p>
+            <a href="#beneficios" id="saiba-mais" class="cta-button">Saiba mais abaixo</a>
+            <img src="./assets/image 11.png" alt="Ilustração de pessoas">
+        </div>
     </section>
 
     <!-- Benefícios -->
@@ -267,7 +412,7 @@
     <!-- Programas -->
     <section class="cta-section" id="inscricao">
         <h2>Programas HEINEKEN</h2>
-        <p>O Conta Comigo é um dos nossos principais benefícios: um espaço seguro, disponível 24 horas, que oferece
+        <p>Um espaço seguro, disponível 24 horas, que oferece
             suporte psicológico, jurídico, financeiro e nutricional, além de apoio em momentos delicados. Ele também é a
             sua porta de entrada para acessar todos os nossos programas de saúde.</p>
 
@@ -290,6 +435,17 @@
             </a>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-p">© 2024 Healthbit. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-p">Política de Cookies</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
