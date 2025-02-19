@@ -25,17 +25,51 @@
             overflow-x: hidden;
         }
 
+        /* Esconde os elementos inicialmente */
+        .hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* Quando o elemento estiver visível, ele aparece */
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .heineken-navbar {
+            margin-top: 3px;
             display: flex;
-            justify-content: space-around;
             align-items: center;
-            padding: 20px 50px;
+            justify-content: space-between;
+            padding: 15px 50px;
             background: white;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
+        .navbar-container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .heineken-logo img {
+            height: 60px;
+        }
+
+        /* Mantendo os links alinhados sem cortar */
+        .navbar-links {
+            display: flex;
+            gap: 30px;
+        }
+
 
         .heineken-logo img {
             height: 60px;
@@ -51,25 +85,24 @@
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
-            transition: color 0.5s ease;
+            transition: color 0.3s ease;
         }
 
         .navbar-links a:hover {
             color: #00A650;
-            transform: scale(1.02);
         }
 
+        /* Hero section */
         .hero-container {
             max-width: 1200px;
-            margin: 100px 25px 30px;
-            background: white;
+            margin: 120px auto 30px;
+            /* background: white; */
             color: #333;
             padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); */
             text-align: center;
             position: relative;
-            margin-top: 150px;
         }
 
         .hero-image-container {
@@ -94,14 +127,15 @@
         }
 
         .hero-title {
-            color: #007a33;
+            color: white;
             font-size: 48px;
             font-weight: bold;
-            margin-top: 80px;
+            margin-top: 30px;
             text-transform: uppercase;
-            animation: fadeIn 1s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
         }
 
+        /* Animações */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -130,7 +164,7 @@
         }
 
         .cta-section h2 {
-            font-size: 36px;
+            font-size: 32px;
             color: #007a33;
             margin-bottom: 20px;
         }
@@ -140,14 +174,8 @@
             justify-content: center;
         }
 
-        section#inscricao {
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            align-items: center;
-        }
-
         .cta-button {
+            margin-top: 12px;
             background: linear-gradient(135deg, #00A650, #007a33);
             color: white;
             padding: 30px;
@@ -172,21 +200,170 @@
             transform: scale(1.08);
             background: linear-gradient(135deg, #008f4c, #005f2c);
         }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .footer-left {
+            width: 50%;
+            background: #288154;
+            padding: 20px;
+        }
+
+        .footer-right {
+            width: 50%;
+            background: #a7e833;
+            padding: 20px;
+        }
+
+        .footer-p {
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            margin: 0 auto 50px;
+            padding: 60px 90px;
+            background: #f8f8f8;
+            color: #333;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .cta-left {
+            /* width: 50%; */
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .cta-right {
+            width: 100%;
+            padding: 50px;
+            background: #a7e833;
+            border-radius: 0 10px 10px 0;
+            position: relative;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            color: #007a33;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            /* background: #007a33; */
+            color: #007a33;
+            /* padding: 15px; */
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: x-large;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00A650, #007a33);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 250px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.08);
+            background: linear-gradient(135deg, #008f4c, #005f2c);
+        }
+
+        .cta-right img {
+            position: absolute;
+            bottom: 1px;
+            right: 85px;
+            max-width: 40%;
+        }
+
+        #saiba-mais {
+            padding: 15px;
+        }
+
+        #programa p,
+        #programa h2 {
+            text-align: left;
+        }
+
+        .cta-right h3 {
+            text-align: left;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Navbar -->
     <header class="heineken-navbar">
-        <div class="heineken-logo">
-            <img src="./assets/Heineken_Logo.svg.png" alt="Heineken">
+        <div class="navbar-container">
+            <div class="heineken-logo">
+                <img src="./assets/Heineken_Logo.svg.png" alt="Heineken">
+            </div>
+            <nav class="navbar-links">
+                <a href="#programa">Conheça o Programa</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#inscricao">Inscreva-se</a>
+            </nav>
         </div>
-        <nav class="navbar-links">
-            <a href="#programa">Conheça o Programa</a>
-            <a href="#beneficios">Benefícios</a>
-            <a href="#inscricao">Inscreva-se</a>
-        </nav>
     </header>
 
+
+    <!-- Hero Section -->
     <div class="hero-container">
         <div class="hero-image-container">
             <img src="./assets/image 10.png" alt="Conta Comigo" class="hero-background">
@@ -194,12 +371,29 @@
         </div>
         <h1 class="hero-title">CONTA COMIGO</h1>
     </div>
+
+    <!-- O que é o programa -->
     <section class="cta-section" id="programa">
-        <h2>O que é o Conta Comigo?</h2>
-        <p>Na HEINEKEN, cuidar de você e da sua família é nossa prioridade! Por isso, reunimos em um só lugar mais de 30
-            benefícios, todos pensados para o seu bem-estar integral.</p>
+        <div class="cta-left">
+            <h2>O que é o Conta Comigo?</h2>
+            <p>Na HEINEKEN, cuidar de você e da sua família é nossa prioridade! Por isso, reunimos em um só lugar mais
+                de 30 benefícios, todos pensados para o seu bem-estar integral.</p>
+            <br>
+            <p>O Conta Comigo é um espaço seguro, disponível 24 horas, que oferece suporte psicológico, jurídico,
+                financeiro e nutricional, além de apoio em momentos delicados.</p>
+        </div>
+        <div class="cta-right">
+            <h3 class="info-box">Informações Importantes</h3>
+            <p>Este benefício é acessível a todos os colaboradores e seus
+                <br>dependentes legais.
+            </p>
+            <p>Disponível em qualquer momento, sem custos adicionais.</p>
+            <a href="#beneficios" id="saiba-mais" class="cta-button">Saiba mais abaixo</a>
+            <img src="./assets/image 11.png" alt="Ilustração de pessoas">
+        </div>
     </section>
 
+    <!-- Benefícios -->
     <section class="cta-section" id="beneficios">
         <h2>Benefícios HEINEKEN</h2>
         <p>Mas há muito mais! Em nossa Cartilha de Benefícios, você encontra todos os detalhes sobre os benefícios que
@@ -214,14 +408,14 @@
         </div>
     </section>
 
+    <!-- Programas -->
     <section class="cta-section" id="inscricao">
         <h2>Programas HEINEKEN</h2>
-        <p>
-        <p>O Conta Comigo é um dos nossos principais benefícios: um espaço seguro, disponível 24 horas, que oferece
+        <p>Um espaço seguro, disponível 24 horas, que oferece
             suporte psicológico, jurídico, financeiro e nutricional, além de apoio em momentos delicados. Ele também é a
             sua porta de entrada para acessar todos os nossos programas de saúde.</p>
-        </p>
-        <div class="cta-button-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+
+        <div class="program-grid">
             <a href="#" class="cta-button">
                 <img src="./assets/image 25.png" alt="Nasce uma Estrela">
                 Nasce uma Estrela
@@ -240,6 +434,37 @@
             </a>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-p">© 2024 Healthbit. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-p">Política de Cookies</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".cta-section");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.4 }); // Ativa quando 20% da seção estiver visível
+
+        sections.forEach(section => {
+            section.classList.add("hidden"); // Adiciona a classe escondida
+            observer.observe(section); // Observa cada seção
+        });
+    });
+</script>
