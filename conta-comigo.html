@@ -19,10 +19,24 @@
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #00A650, #006837);
+            /* background: linear-gradient(to bottom, #00A650, #006837); */
+            background-color: #298254;
             color: #fff;
             text-align: center;
             overflow-x: hidden;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Esconde os elementos inicialmente */
@@ -38,6 +52,7 @@
             transform: translateY(0);
         }
 
+        /* NAVBAR */
         .heineken-navbar {
             margin-top: 3px;
             display: flex;
@@ -81,7 +96,7 @@
         }
 
         .navbar-links a {
-            color: #006837;
+            color: #215426;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
@@ -89,10 +104,10 @@
         }
 
         .navbar-links a:hover {
-            color: #00A650;
+            color: #298254;
         }
 
-        /* Hero section */
+        /* HERO */
         .hero-container {
             max-width: 1200px;
             margin: 120px auto 30px;
@@ -135,140 +150,7 @@
             animation: fadeIn 2s ease-in-out;
         }
 
-        /* Animações */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .cta-section {
-            border-radius: 10px;
-            margin: 0 20px;
-            padding: 80px 90px;
-            background: #f8f8f8;
-            color: #333;
-            text-align: center;
-            margin-bottom: 50px;
-            animation: fadeInUp 1s ease-in-out;
-        }
-
-        .cta-section:nth-child(even) {
-            background: #fff;
-        }
-
-        .cta-section h2 {
-            font-size: 32px;
-            color: #007a33;
-            margin-bottom: 20px;
-        }
-
-        .cta-button-grid {
-            display: flex;
-            justify-content: center;
-        }
-
-        .cta-button {
-            margin-top: 12px;
-            background: linear-gradient(135deg, #00A650, #007a33);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 22px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-        }
-
-        .cta-button img {
-            max-width: 80px;
-            margin-bottom: 20px;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.08);
-            background: linear-gradient(135deg, #008f4c, #005f2c);
-        }
-
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .footer {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            font-size: 16px;
-            color: white;
-            margin-top: 50px;
-        }
-
-        .footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 16px;
-            color: white;
-            margin-top: 50px;
-        }
-
-        .footer-container {
-            display: flex;
-            width: 100%;
-        }
-
-        .footer-left {
-            width: 50%;
-            background: #288154;
-            padding: 20px;
-        }
-
-        .footer-right {
-            width: 50%;
-            background: #a7e833;
-            padding: 20px;
-        }
-
-        .footer-p {
-            font-size: medium;
-            font-weight: bold;
-        }
-
-        .cta-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            border-radius: 10px;
-            margin: 0 auto 50px;
-            padding: 60px 90px;
-            background: #f8f8f8;
-            color: #333;
-            max-width: 1200px;
-            text-align: center;
-        }
-
+        /* O QUE É O PROGRAMA */
         .cta-left {
             /* width: 50%; */
             padding: 20px;
@@ -277,22 +159,16 @@
         }
 
         .cta-right {
-            width: 100%;
+            width: 90%;
             padding: 50px;
-            background: #a7e833;
+            background: #A6E833;
             border-radius: 0 10px 10px 0;
             position: relative;
         }
 
-        .cta-section h2 {
-            font-size: 32px;
-            color: #007a33;
-            margin-bottom: 20px;
-        }
-
         .info-box {
             /* background: #007a33; */
-            color: #007a33;
+            color: #215426;
             /* padding: 15px; */
             border-radius: 8px;
             font-weight: bold;
@@ -302,21 +178,160 @@
             margin-bottom: 10px;
         }
 
-        .cta-button {
-            background: linear-gradient(135deg, #00A650, #007a33);
-            color: white;
+        .images-atendimento {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .atendimento-img {
+            position: absolute;
+            bottom: 15px;
+            right: 145px;
+            max-width: 30%;
+        }
+
+        img.nuvens {
+            width: 400px;
+            position: relative;
+            right: -630px;
+            bottom: 250px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-item img {
+            width: 25px;
+            height: auto;
+        }
+
+
+        #saiba-mais {
+            padding: 15px;
+            width: 350px;
+            height: 20px;
+            background-color: #298254;
+        }
+
+        #programa p,
+        #programa h2 {
+            text-align: justify;
+        }
+
+        .cta-right h3 {
+            text-align: left;
+            width: 100%;
+        }
+
+        /* BENEFÍCIOS */
+        .cta-section {
+            border-radius: 10px;
+            margin: 0 10px 50px;
+            padding: 60px 90px;
+            background: #f8f8f8;
+            color: #333;
+            /* max-width: 1200px; */
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            color: #215426;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .cta-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+        .cta-box {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            display: flex;
             padding: 20px;
-            border-radius: 15px;
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out;
+            height: 300px;
+            flex-direction: column;
+        }
+
+        /* .cta-box:hover {
+            transform: scale(1.05);
+        } */
+
+        .cta-box h3 {
+            font-size: 22px;
+            color: #215426;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .cta-button-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .cta-button {
+            /* background: linear-gradient(135deg, #00A650, #007a33); */
+            color: white;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-width: 250px;
-            margin-top: 20px;
+            width: 140px;
+            height: 135px;
+        }
+
+        .cta-button img {
+            max-width: 50px;
+            margin-bottom: 8px;
+        }
+
+        img.img-beneficios {
+            margin-bottom: 20px;
+            height: 60px;
+            width: auto;
+        }
+
+        #btn-beneficios {
+            background-color: #A6E833;
+            /* color: #FF2B00; */
+        }
+
+        #btn-programas {
+            background-color: #298254;
         }
 
         .cta-button:hover {
@@ -324,25 +339,59 @@
             background: linear-gradient(135deg, #008f4c, #005f2c);
         }
 
-        .cta-right img {
-            position: absolute;
-            bottom: 1px;
-            right: 85px;
-            max-width: 40%;
+        .cta-subtitle {
+            font-size: 0.55rem;
+            color: white;
+            font-weight: 200;
+            margin-top: 5px;
         }
 
-        #saiba-mais {
-            padding: 15px;
+        .divider {
+            height: auto;
+            width: 2px;
+            background: #215426;
+            align-self: stretch;
         }
 
-        #programa p,
-        #programa h2 {
-            text-align: left;
+        /* FOOTER */
+        .footer {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            margin-top: 50px;
         }
 
-        .cta-right h3 {
-            text-align: left;
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+        }
+
+        .footer-container {
+            display: flex;
             width: 100%;
+        }
+
+        .footer-left {
+            width: 50%;
+            background: #215426;
+            padding: 20px;
+        }
+
+        .footer-right {
+            width: 50%;
+            background: #A6E833;
+            padding: 20px;
+        }
+
+        .footer-p {
+            font-size: small;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -352,16 +401,15 @@
     <header class="heineken-navbar">
         <div class="navbar-container">
             <div class="heineken-logo">
-                <img src="./assets/Heineken_Logo.svg.png" alt="Heineken">
+                <a href="#"> <img src="./assets/Heineken_Logo.svg.png" alt="Heineken"></a>
             </div>
             <nav class="navbar-links">
                 <a href="#programa">Conheça o Programa</a>
-                <a href="#beneficios">Benefícios</a>
-                <a href="#inscricao">Inscreva-se</a>
+                <!-- <a href="#beneficios">Benefícios</a> -->
+                <a href="#beneficios">Inscreva-se</a>
             </nav>
         </div>
     </header>
-
 
     <!-- Hero Section -->
     <div class="hero-container">
@@ -375,63 +423,83 @@
     <!-- O que é o programa -->
     <section class="cta-section" id="programa">
         <div class="cta-left">
-            <h2>O que é o Conta Comigo?</h2>
-            <p>Na HEINEKEN, cuidar de você e da sua família é nossa prioridade! Por isso, reunimos em um só lugar mais
-                de 30 benefícios, todos pensados para o seu bem-estar integral.</p>
-            <br>
-            <p>O Conta Comigo é um espaço seguro, disponível 24 horas, que oferece suporte psicológico, jurídico,
-                financeiro e nutricional, além de apoio em momentos delicados.</p>
+            <h2>Já conhecia o Conta Comigo?</h2>
+            <p>Na HEINEKEN, cuidar de você e da sua família é a nossa prioridade, e por isso, o <strong>Conta
+                    Comigo</strong> é mais um
+                dos <strong>+30 benefícios</strong> pensados para o seu bem-estar integral - um espaço seguro,
+                disponível 24 horas, com
+                atendimento <strong>100% confidencial e personalizado</strong> para te apoiar em todos os momentos de
+                sua vida.
+
+            </p>
+            <p>São diversos <strong> temas e programas de saúde</strong>, agora ainda mais completos, que garantem o
+                cuidado e acolhimento
+                que você e sua família merecem!</p>
         </div>
         <div class="cta-right">
-            <h3 class="info-box">Informações Importantes</h3>
-            <p>Este benefício é acessível a todos os colaboradores e seus
-                <br>dependentes legais.
-            </p>
-            <p>Disponível em qualquer momento, sem custos adicionais.</p>
-            <a href="#beneficios" id="saiba-mais" class="cta-button">Saiba mais abaixo</a>
-            <img src="./assets/image 11.png" alt="Ilustração de pessoas">
+            <h3 class="info-box">Canais de Atendimento</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="./assets/telefone.png" alt="Telefone">
+                    <p><strong>Telefone:</strong> 0800 888 0192</p>
+                </div>
+                <div class="contact-item">
+                    <img src="./assets/whatsapp.png" alt="WhatsApp">
+                    <p><strong>WhatsApp:</strong> (XX) XXXXX-XXXX</p>
+                </div>
+                <div class="contact-item">
+                    <img src="./assets/email.png" alt="E-mail">
+                    <p><strong>E-mail:</strong> email@contacomigo.com</p>
+                </div>
+            </div>
+
+            <a href="#beneficios" id="saiba-mais" class="cta-button">Confira mais informações logo abaixo</a>
+            <!-- <div class="images-atendimento"> -->
+            <!-- <img class="nuvens" src="./assets/nuvens.png" alt="Nuvens"> -->
+            <img class="atendimento-img" src="./assets/contacomigobanner2.png" alt="Ilustração de atendimento">
+            <!-- </div> -->
         </div>
     </section>
 
-    <!-- Benefícios -->
     <section class="cta-section" id="beneficios">
-        <h2>Benefícios HEINEKEN</h2>
-        <p>Mas há muito mais! Em nossa Cartilha de Benefícios, você encontra todos os detalhes sobre os benefícios que
-            estão à sua disposição. Explore, aproveite e lembre-se: para cada momento na HEINEKEN, há um benefício
-            pensado para você.</p>
-        <br>
-        <div class="cta-button-grid">
-            <a href="#" class="cta-button">
-                <img src="./assets/image 1.png" alt="Benefícios">
-                Benefícios HEINEKEN
-            </a>
-        </div>
-    </section>
-
-    <!-- Programas -->
-    <section class="cta-section" id="inscricao">
-        <h2>Programas HEINEKEN</h2>
-        <p>Um espaço seguro, disponível 24 horas, que oferece
-            suporte psicológico, jurídico, financeiro e nutricional, além de apoio em momentos delicados. Ele também é a
-            sua porta de entrada para acessar todos os nossos programas de saúde.</p>
-
-        <div class="program-grid">
-            <a href="#" class="cta-button">
-                <img src="./assets/image 25.png" alt="Nasce uma Estrela">
-                Nasce uma Estrela
-            </a>
-            <a href="#" class="cta-button">
-                <img src="./assets/image 18.png" alt="Heineken Cuida">
-                Heineken Cuida
-            </a>
-            <a href="#" class="cta-button">
-                <img src="./assets/image 15.png" alt="Viva Bem HEINEKEN">
-                Viva Bem HEINEKEN
-            </a>
-            <a href="#" class="cta-button">
-                <img src="./assets/image 13.png" alt="Conta Comigo">
-                Conta Comigo
-            </a>
+        <h2>Benefícios e Programas de Saúde</h2>
+        <div class="cta-container">
+            <div class="cta-box" style="flex: 0.5;">
+                <h3>Benefícios HEINEKEN</h3>
+                <p>Todos os benefícios em único lugar!</p>
+                <a href="#" id="btn-beneficios" class="cta-button">
+                    <img class="img-beneficios" src="./assets/image 9.png" alt="Benefícios">
+                    Benefícios HEINEKEN
+                    <!-- <p class="cta-subtitle">Conheça os Benefícios!</p> -->
+                </a>
+            </div>
+            <div class="divider"></div>
+            <div class="cta-box" style="flex: 1.5;">
+                <h3>Programas de Saúde</h3>
+                <p>Venha saber mais sobre nossos programas:</p>
+                <div class="cta-button-grid">
+                    <a id="btn-programas" href="#" class="cta-button">
+                        <img class="hnk-cuida" src="./assets/image 15.png" alt="Heineken Cuida">
+                        Heineken Cuida
+                        <p class="cta-subtitle">Programa Saúde Mental</p>
+                    </a>
+                    <a id="btn-programas" href="#" class="cta-button">
+                        <img src="./assets/image 15.png" alt="Nasce uma Estrela">
+                        Nasce uma Estrela
+                        <p class="cta-subtitle">Programa da Família</p>
+                    </a>
+                    <a id="btn-programas" href="#" class="cta-button">
+                        <img src="./assets/image 15.png" alt="Viva Bem HEINEKEN">
+                        Viva Bem
+                        <p class="cta-subtitle">Programa de Crônicos</p>
+                    </a>
+                    <a id="btn-programas" href="#" class="cta-button">
+                        <img src="./assets/image 15.png" alt="Conta Comigo">
+                        Conta Comigo
+                        <p class="cta-subtitle">Fale Conosco (Whatsapp)</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -445,7 +513,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
